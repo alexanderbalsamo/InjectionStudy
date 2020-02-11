@@ -1,38 +1,18 @@
 import matplotlib.pyplot as plt
-import numpy
+import numpy as np
 
 ################## NSNS #####################
 # NSNS values 90% Exclusion Distance
 100NSNS_90 = [78.9189782209, 78.9347588971, 79.0624982419, 79.1015907893, 78.8601544349, 78.9680838613]
-100NSNS_90_mean = np.mean(100NSNS_90)
-100NSNS_90_std = np.std(100NSNS_90)
 90NSNS_90 = [92.9165926058, 94.3025193943, 94.0469681411, 94.5478369454, 94.3640703452, 94.5839047136]
-90NSNS_90_mean = np.mean(90NSNS_90)
-90NSNS_90_std = np.std(90NSNS_90)
 80NSNS_90 = [94.0069271597, 94.2031136452, 93.5605162563, 94.0053867499, 94.2461926244, 94.346149776]
-100NSNS_90_mean = np.mean(100NSNS_90)
-100NSNS_90_std = np.std(100NSNS_90)
 70NSNS_90 = [100.434236299, 100.585763286, 100.129131498, 100.142645371, 100.448732085, 100.025351176]
-100NSNS_90_mean = np.mean(100NSNS_90)
-100NSNS_90_std = np.std(100NSNS_90)
 60NSNS_90 = [87.0269604652, 86.9341466085, 87.1095673338, 87.1081618228, 87.1429810745, 87.0062476161]
-100NSNS_90_mean = np.mean(100NSNS_90)
-100NSNS_90_std = np.std(100NSNS_90)
 50NSNS_90 = [72.9300087041, 72.7428773732, 73.0010302719, 72.8377582871, 72.5678715571, 72.6968309418]
-100NSNS_90_mean = np.mean(100NSNS_90)
-100NSNS_90_std = np.std(100NSNS_90)
 40NSNS_90 = [84.5630374059, 83.5577502632, 83.7293114455, 83.6737690712, 83.3168917721, 83.0745571151]
-100NSNS_90_mean = np.mean(100NSNS_90)
-100NSNS_90_std = np.std(100NSNS_90)
 30NSNS_90 = [45.6759170704, 46.1483939185, 46.3503417378, 46.5123626662, 46.5367393911, 47.1773016398]
-100NSNS_90_mean = np.mean(100NSNS_90)
-100NSNS_90_std = np.std(100NSNS_90)
 20NSNS_90 = [21.7569936113, 21.7243006899, 21.72824956, 21.6071384198, 21.5124136015, 21.5534630033]
-100NSNS_90_mean = np.mean(100NSNS_90)
-100NSNS_90_std = np.std(100NSNS_90)
 10NSNS_90 = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-100NSNS_90_mean = np.mean(100NSNS_90)
-100NSNS_90_std = np.std(100NSNS_90)
 
 # NSNS values 50% Exclusion Distance
 100NSNS_50 = [144.196384024, 143.53257576, 143.955000619, 143.929941906, 143.854410956, 143.668717867]
@@ -102,18 +82,35 @@ import numpy
 55NSBHPrecess_50 = []
 50NSBHPrecess_50 = [216.431939253, 216.100003704, 215.894891021, 216.838876715, 216.141174189, 216.749881009]
 
-################ Plotting #################
-nsns30inj = []
-nsbhalign = []
-nsbhprecess = []
-nsbhprecessseob = []
-numInj = []
+############### Injections ################
+nsnsInj = 4000
+nsbhAlignInj = 12500
+nsbhPrecessInj = 12500
 
-fig=plt.figure()
-ax=fig.add_axes([0,0,1,1])
-ax.scatter(numInj, nsns30inj, color='r')
-ax.scatter(numInj, nsbhalign, color='b')
+################ Plotting #################
+nsns_90_mean = [np.mean(100NSNS_90), np.mean(90NSNS_90), np.mean(80NSNS_90), np.mean(70NSNS_90), np.mean(60NSNS_90), np.mean(50NSNS_90), np.mean(40NSNS_90), np.mean(30NSNS_90), np.mean(20NSNS_90), np.mean(10NSNS_90)]
+nsns_90_std = [np.std(100NSNS_90), np.std(90NSNS_90), np.std(80NSNS_90), np.std(70NSNS_90), np.std(60NSNS_90), np.std(50NSNS_90), np.std(40NSNS_90), np.std(30NSNS_90), np.std(20NSNS_90), np.std(10NSNS_90)]
+nsns_50_mean = [np.mean(100NSNS_50), np.mean(90NSNS_50), np.mean(80NSNS_50), np.mean(70NSNS_50), np.mean(60NSNS_50), np.mean(50NSNS_50), np.mean(40NSNS_50), np.mean(30NSNS_50), np.mean(20NSNS_50), np.mean(10NSNS_50)]
+nsns_50_std = [np.std(100NSNS_50), np.std(90NSNS_50), np.std(80NSNS_50), np.std(70NSNS_50), np.std(60NSNS_50), np.std(50NSNS_50), np.std(40NSNS_50), np.std(30NSNS_50), np.std(20NSNS_50), np.std(10NSNS_50)]
+nsnsNumInj = [1*nsnsInj, 0.9*nsnsInj, 0.8*nsnsInj, 0.7*nsnsInj, 0.6*nsnsInj, 0.5*nsnsInj, 0.4*nsnsInj, 0.3*nsnsInj, 0.2*nsnsInj, 0.1*nsnsInj]
+
+nsbhAlign_90_mean = [np.mean(100NSBHAlign_90), np.mean(95NSBHAlign_90), np.mean(90NSBHAlign_90), np.mean(85NSBHAlign_90), np.mean(80NSBHAlign_90), np.mean(75NSBHAlign_90), np.mean(70NSBHAlign_90), np.mean(65NSBHAlign_90), np.mean(60NSBHAlign_90), np.mean(50NSBHAlign_90)]
+nsbhAlign_90_std = [np.std(100NSBHAlign_90), np.std(95NSBHAlign_90), np.std(90NSBHAlign_90), np.std(85NSBHAlign_90), np.std(80NSBHAlign_90), np.std(75NSBHAlign_90), np.std(70NSBHAlign_90), np.std(65NSBHAlign_90), np.std(60NSBHAlign_90), np.std(50NSBHAlign_90)]
+nsbhAlign_50_mean = [np.mean(100NSBHAlign_50), np.mean(95NSBHAlign_50), np.mean(90NSBHAlign_50), np.mean(85NSBHAlign_50), np.mean(80NSBHAlign_50), np.mean(75NSBHAlign_50), np.mean(70NSBHAlign_50), np.mean(65NSBHAlign_50), np.mean(60NSBHAlign_50), np.mean(50NSBHAlign_50)]
+nsbhAlign_50_std = [np.std(100NSBHAlign_50), np.std(95NSBHAlign_50), np.std(90NSBHAlign_50), np.std(85NSBHAlign_50), np.std(80NSBHAlign_50), np.std(75NSBHAlign_50), np.std(70NSBHAlign_50), np.std(65NSBHAlign_50), np.std(60NSBHAlign_50), np.std(50NSBHAlign_50)]
+nsbhAlignNumInj = [1*nsbhAlignInj, 0.95*nsbhAlignInj, 0.9*nsbhAlignInj, 0.85*nsbhAlignInj, 0.8*nsbhAlignInj, 0.75*nsbhAlignInj, 0.7*nsbhAlignInj, 0.65*nsbhAlignInj, 0.6*nsbhAlignInj, 0.5*nsbhAlignInj]
+
+nsbhPrecess_90_mean = [np.mean(100NSBHPrecess_90), np.mean(95NSBHPrecess_90), np.mean(90NSBHPrecess_90), np.mean(85NSBHPrecess_90), np.mean(80NSBHPrecess_90), np.mean(75NSBHPrecess_90), np.mean(70NSBHPrecess_90), np.mean(65NSBHPrecess_90), np.mean(60NSBHPrecess_90), np.mean(50NSBHPrecess_90)]
+nsbhPrecess_90_std = [np.std(100NSBHPrecess_90), np.std(95NSBHPrecess_90), np.std(90NSBHPrecess_90), np.std(85NSBHPrecess_90), np.std(80NSBHPrecess_90), np.std(75NSBHPrecess_90), np.std(70NSBHPrecess_90), np.std(65NSBHPrecess_90), np.std(60NSBHPrecess_90), np.std(50NSBHPrecess_90)]
+nsbhPrecess_50_mean = [np.mean(100NSBHPrecess_50), np.mean(95NSBHPrecess_50), np.mean(90NSBHPrecess_50), np.mean(85NSBHPrecess_50), np.mean(80NSBHPrecess_50), np.mean(75NSBHPrecess_50), np.mean(70NSBHPrecess_50), np.mean(65NSBHPrecess_50), np.mean(60NSBHPrecess_50), np.mean(50NSBHPrecess_50)]
+nsbhPrecess_50_std = [np.std(100NSBHPrecess_50), np.std(95NSBHPrecess_50), np.std(90NSBHPrecess_50), np.std(85NSBHPrecess_50), np.std(80NSBHPrecess_50), np.std(75NSBHPrecess_50), np.std(70NSBHPrecess_50), np.std(65NSBHPrecess_50), np.std(60NSBHPrecess_50), np.std(50NSBHPrecess_50)]
+nsbhPrecessNumInj = [1*nsbhPrecessInj, 0.95*nsbhPrecessInj, 0.9*nsbhPrecessInj, 0.85*nsbhPrecessInj, 0.8*nsbhPrecessInj, 0.75*nsbhPrecessInj, 0.7*nsbhPrecessInj, 0.65*nsbhPrecessInj, 0.6*nsbhPrecessInj, 0.5*nsbhPrecessInj]
+
+NSNS_Plot=plt.figure()
+ax=NSNS_Plot.add_axes([0,0,1000,1000])
+ax.scatter(nsnsNumInj, nsns_90_mean, color='r')
+ax.scatter(nsnsNumInj, nsns_50_mean, color='b')
 ax.set_xlabel('Number of Injections')
 ax.set_ylabel('Exclusion Distance (Mpc)')
-ax.set_title('Exclusion Distance vs. Injections')
+ax.set_title('Exclusion Distance vs. Injections for NSNS')
 plt.show()
