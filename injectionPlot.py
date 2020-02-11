@@ -106,11 +106,16 @@ nsbhPrecess_50_mean = [np.mean(inj100NSBHPrecess_50), np.mean(inj95NSBHPrecess_5
 nsbhPrecess_50_std = [np.std(inj100NSBHPrecess_50), np.std(inj95NSBHPrecess_50), np.std(inj90NSBHPrecess_50), np.std(inj85NSBHPrecess_50), np.std(inj80NSBHPrecess_50), np.std(inj75NSBHPrecess_50), np.std(inj70NSBHPrecess_50), np.std(inj65NSBHPrecess_50), np.std(inj60NSBHPrecess_50), np.std(inj50NSBHPrecess_50)]
 nsbhPrecessNumInj = [1*nsbhPrecessInj, 0.95*nsbhPrecessInj, 0.9*nsbhPrecessInj, 0.85*nsbhPrecessInj, 0.8*nsbhPrecessInj, 0.75*nsbhPrecessInj, 0.7*nsbhPrecessInj, 0.65*nsbhPrecessInj, 0.6*nsbhPrecessInj, 0.5*nsbhPrecessInj]
 
-NSNS_Plot=plt.figure()
-ax=NSNS_Plot.add_axes([0,0,1000,1000])
+# NSNS Plot
+fig=plt.figure()
+plt.axis()
 ax.scatter(nsnsNumInj, nsns_90_mean, color='r')
 ax.scatter(nsnsNumInj, nsns_50_mean, color='b')
 ax.set_xlabel('Number of Injections')
 ax.set_ylabel('Exclusion Distance (Mpc)')
 ax.set_title('Exclusion Distance vs. Injections for NSNS')
 plt.show()
+
+#NSBHAlign Plot
+
+#NSBHPrecess Plot
