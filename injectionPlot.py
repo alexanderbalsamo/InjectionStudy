@@ -107,37 +107,55 @@ nsbhPrecess_50_std = [np.std(injcontrolNSBHPrecess_50), np.std(inj95NSBHPrecess_
 nsbhPrecessNumInj = [1*nsbhPrecessInj, 0.95*nsbhPrecessInj, 0.9*nsbhPrecessInj, 0.85*nsbhPrecessInj, 0.8*nsbhPrecessInj, 0.75*nsbhPrecessInj, 0.7*nsbhPrecessInj, 0.65*nsbhPrecessInj, 0.6*nsbhPrecessInj, 0.5*nsbhPrecessInj]
 
 # NSNS Plot
+x1 = [0,4200]
 figNSNS=plt.figure()
 axNSNS=figNSNS.gca()
+
 axNSNS.errorbar(nsnsNumInj_90, nsns_90_mean, yerr=nsns_90_std, fmt='o', color='r', label='NSNS 90% Exclusion Distances')
 line90 = axNSNS.axhline(np.mean(injcontrolNSNS_90), dashes=[6,2], label='GRB190420981 NSNS 90% Exclusion Distance', color='r')
+axNSNS.fill_between(x1, 0.1*np.mean(injcontrolNSNS_90)+np.mean(injcontrolNSNS_90), np.mean(injcontrolNSNS_90) - 0.1*np.mean(injcontrolNSNS_90), alpha=0.1, color='r')
+
 axNSNS.errorbar(nsnsNumInj_50, nsns_50_mean, yerr=nsns_50_std, fmt='o', color='b', label='NSNS 50% Exclusion Distance')
 line50 = axNSNS.axhline(np.mean(injcontrolNSNS_50), dashes=[6,2], label='GRB190420981 NSNS 50% Exclusion Distance', color='b')
+axNSNS.fill_between(x1, 0.1*np.mean(injcontrolNSNS_50)+np.mean(injcontrolNSNS_50), np.mean(injcontrolNSNS_50) - 0.1*np.mean(injcontrolNSNS_50), alpha=0.1, color='b')
+
 axNSNS.set_xlabel('Number of Injections', fontsize=20)
 axNSNS.set_ylabel('Exclusion Distance (Mpc)', fontsize=20)
 axNSNS.set_title('Exclusion Distance vs. Injections for NSNS', fontsize=30)
 axNSNS.legend(loc='lower right', prop={'size':20})
-#plt.show()
+axNSNS.set_xlim(0,4200)
 
 #NSBHAlign Plot
+x2 = [6000,13000]
 figNSBHAlign=plt.figure()
 axNSBHAlign=figNSBHAlign.gca()
+
 axNSBHAlign.errorbar(nsbhAlignNumInj, nsbhAlign_90_mean, yerr=nsbhAlign_90_std, fmt='o', color='k', label='NSBH Aligned 90% Exclusion Distances')
 line90 = axNSBHAlign.axhline(np.mean(injcontrolNSBHAlign_90), dashes=[6,2], label='GRB190420981 NSBH Aligned 90% Exclusion Distance', color='k')
+axNSBHAlign.fill_between(x2, 0.1*np.mean(injcontrolNSBHAlign_90)+np.mean(injcontrolNSBHAlign_90), np.mean(injcontrolNSBHAlign_90) - 0.1*np.mean(injcontrolNSBHAlign_90), alpha=0.1, color='k')
+
 axNSBHAlign.errorbar(nsbhAlignNumInj, nsbhAlign_50_mean, yerr=nsbhAlign_50_std, fmt='o', color='m', label='NSBH Aligned 50% Exclusion Distance')
 line50 = axNSBHAlign.axhline(np.mean(injcontrolNSBHAlign_50), dashes=[6,2], label='GRB190420981 NSBH Aligned 50% Exclusion Distance', color='m')
+axNSBHAlign.fill_between(x2, 0.1*np.mean(injcontrolNSBHAlign_50)+np.mean(injcontrolNSBHAlign_50), np.mean(injcontrolNSBHAlign_50) - 0.1*np.mean(injcontrolNSBHAlign_50), alpha=0.1, color='m')
+
 axNSBHAlign.set_xlabel('Number of Injections', fontsize=20)
 axNSBHAlign.set_ylabel('Exclusion Distance (Mpc)', fontsize=20)
 axNSBHAlign.set_title('Exclusion Distance vs. Injections for NSBH Aligned', fontsize=30)
 axNSBHAlign.legend(loc='lower right', prop={'size':20})
+axNSBHAlign.set_xlim(6000,13000)
 
 #NSBHPrecess Plot
 figNSBHPrecess=plt.figure()
 axNSBHPrecess=figNSBHPrecess.gca()
+
 axNSBHPrecess.errorbar(nsbhPrecessNumInj, nsbhPrecess_90_mean, yerr=nsbhPrecess_90_std, fmt='o', color='g', label='NSBH Precessed 90% Exclusion Distances')
 line90 = axNSBHPrecess.axhline(np.mean(injcontrolNSBHPrecess_90), dashes=[6,2], label='GRB190420981 NSBH Precessed 90% Exclusion Distance', color='g')
+axNSBHPrecess.fill_between(x2, 0.1*np.mean(injcontrolNSBHPrecess_90)+np.mean(injcontrolNSBHPrecess_90), np.mean(injcontrolNSBHPrecess_90) - 0.1*np.mean(injcontrolNSBHPrecess_90), alpha=0.1, color='g')
+
 axNSBHPrecess.errorbar(nsbhPrecessNumInj, nsbhPrecess_50_mean, yerr=nsbhPrecess_50_std, fmt='o', color='c', label='NSBH Precessed 50% Exclusion Distance')
 line50 = axNSBHPrecess.axhline(np.mean(injcontrolNSBHPrecess_50), dashes=[6,2], label='GRB190420981 NSBH Precessed 50% Exclusion Distance', color='c')
+axNSBHPrecess.fill_between(x2, 0.1*np.mean(injcontrolNSBHPrecess_50)+np.mean(injcontrolNSBHPrecess_50), np.mean(injcontrolNSBHPrecess_50) - 0.1*np.mean(injcontrolNSBHPrecess_50), alpha=0.1, color='c')
+
 axNSBHPrecess.set_xlabel('Number of Injections', fontsize=20)
 axNSBHPrecess.set_ylabel('Exclusion Distance (Mpc)', fontsize=20)
 axNSBHPrecess.set_title('Exclusion Distance vs. Injections for NSBH Precessed', fontsize=30)
