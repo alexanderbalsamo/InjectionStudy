@@ -4,6 +4,7 @@ import numpy as np
 ################## NSNS #####################
 # NSNS values 90% Exclusion Distance
 injcontrolNSNS_90 = [78.9189782209, 78.9347588971, 79.0624982419, 79.1015907893, 78.8601544349, 78.9680838613]
+inj100NSNS_90 = [94.9438081033, 95.2376446743, 94.7819281981, 94.7663454159, 94.8923562341, 95.4277095035]
 inj90NSNS_90 = [92.9165926058, 94.3025193943, 94.0469681411, 94.5478369454, 94.3640703452, 94.5839047136]
 inj80NSNS_90 = [94.0069271597, 94.2031136452, 93.5605162563, 94.0053867499, 94.2461926244, 94.346149776]
 inj70NSNS_90 = [100.434236299, 100.585763286, 100.129131498, 100.142645371, 100.448732085, 100.025351176]
@@ -15,6 +16,7 @@ inj20NSNS_90 = [21.7569936113, 21.7243006899, 21.72824956, 21.6071384198, 21.512
 
 # NSNS values 50% Exclusion Distance
 injcontrolNSNS_50 = [144.196384024, 143.53257576, 143.955000619, 143.929941906, 143.854410956, 143.668717867]
+inj100NSNS_50 = [140.746955652, 140.852561997, 140.613756358, 140.253626339, 140.595961996, 140.433665792]
 inj90NSNS_50 = [154.547375392, 154.419120006, 155.558067461, 154.898771144, 155.561762223, 155.626543739]
 inj80NSNS_50 = [152.568418535, 152.687889745, 152.680025048, 153.09578581, 152.358705009, 152.691744584]
 inj70NSNS_50 = [134.897211186, 134.909775946, 135.34890953, 135.852284649, 135.351269819, 134.992696178]
@@ -29,6 +31,7 @@ inj10NSNS_50 = [169.164853127, 172.803736053, 167.152872584, 166.230209599, 167.
 ############## NSBH Align ###################
 # NSBH Align values 90% Exclusion Distance
 injcontrolNSBHAlign_90 = [160.86881326, 160.68696424, 160.960200364, 160.573390316, 161.185777892, 160.2643286]
+inj100NSBHAlign_90 = [170.546104743, 170.693962943, 170.767397277, 170.625265781, 170.715042494, 170.81619003]
 inj95NSBHAlign_90 = [166.591174158, 166.091603646, 166.359440313, 166.128574857, 166.119115893, 166.125553561]
 inj90NSBHAlign_90 = [121.317462921, 121.414330282, 121.230589511, 121.638331433, 121.475590308, 120.958011617]
 inj85NSBHAlign_90 = [156.709190679, 157.053546857, 157.466613771, 157.033615861, 156.446903864, 157.235943722]
@@ -42,6 +45,7 @@ inj50NSBHAlign_90 = [95.9897934818, 95.991710212, 96.0710748837, 96.0876973685, 
 
 # NSBH Align values 50% Exclusion Distance
 injcontrolNSBHAlign_50 = [255.465800518, 256.188320438, 256.354669215, 256.196380005, 255.597874487, 256.673287845]
+inj100NSBHAlign_50 = [263.771339203, 263.829231385, 263.608903423, 263.925529938, 263.754612308, 264.327239833]
 inj95NSBHAlign_50 = [269.319731386, 269.441853121, 268.694646179, 269.110023808, 268.531815415, 268.681358188]
 inj90NSBHAlign_50 = [253.67608349, 253.869224331, 253.332072341, 253.970907972, 253.927776798, 253.288728357]
 inj85NSBHAlign_50 = [259.407024144, 259.606025422, 259.341036459, 259.692875034, 259.502456784, 259.365432203]
@@ -57,6 +61,7 @@ inj50NSBHAlign_50 = [228.976784795, 229.204054574, 228.881380385, 229.427981036,
 ############## NSBH Precess #################
 # NSBH Precess values 90% Exclusion Distance
 injcontrolNSBHPrecess_90 = [143.153572038, 142.534796467, 143.069365793, 142.528709605, 142.734505243, 143.05024251]
+inj100NSBHPrecess_90 = [110.674653605, 110.482226622, 110.708038496, 110.582831001, 110.128173993, 110.740310794]
 inj95NSBHPrecess_90 = [115.137747459, 114.44096906, 109.410922495, 109.715321309, 109.617922471, 109.388621958]
 inj90NSBHPrecess_90 = [49.2944921555, 49.5644721691, 49.3362856761, 49.6773247507, 49.5398661328, 49.5240325102]
 inj85NSBHPrecess_90 = [115.712311069, 115.737523699, 115.923619243, 116.113475158, 115.875926262, 116.055555176]
@@ -70,6 +75,7 @@ inj50NSBHPrecess_90 = [41.4477585094, 41.5584046895, 41.4561050812, 41.399075868
 
 # NSBH Precess values 50% Exclusion Distance
 injcontrolNSBHPrecess_50 = [200.264134725, 200.455270271, 200.469943686, 200.560334116, 200.723492269, 200.114008841]
+inj100NSBHPrecess_50 = [206.764778991, 206.550112434, 206.56373623, 206.411632091, 206.564207116, 206.733428984]
 inj95NSBHPrecess_50 = [230.217143222, 229.95352822, 229.635230369, 230.013637882, 230.146358413, 229.997410035]
 inj90NSBHPrecess_50 = [229.076115063, 229.824143363, 229.485469227, 229.290808875, 230.254034613, 229.110928524]
 inj85NSBHPrecess_50 = [237.428890094, 237.167405732, 236.493366616, 236.457322927, 236.405691677, 236.420163565]
@@ -87,23 +93,23 @@ nsbhAlignInj = 12500
 nsbhPrecessInj = 12500
 
 ################ Plotting #################
-nsns_90_mean = [np.mean(injcontrolNSNS_90), np.mean(inj90NSNS_90), np.mean(inj80NSNS_90), np.mean(inj70NSNS_90), np.mean(inj60NSNS_90), np.mean(inj50NSNS_90), np.mean(inj40NSNS_90), np.mean(inj30NSNS_90), np.mean(inj20NSNS_90)]
-nsns_90_std = [np.std(injcontrolNSNS_90), np.std(inj90NSNS_90), np.std(inj80NSNS_90), np.std(inj70NSNS_90), np.std(inj60NSNS_90), np.std(inj50NSNS_90), np.std(inj40NSNS_90), np.std(inj30NSNS_90), np.std(inj20NSNS_90)]
+nsns_90_mean = [np.mean(inj100NSNS_90), np.mean(inj90NSNS_90), np.mean(inj80NSNS_90), np.mean(inj70NSNS_90), np.mean(inj60NSNS_90), np.mean(inj50NSNS_90), np.mean(inj40NSNS_90), np.mean(inj30NSNS_90), np.mean(inj20NSNS_90)]
+nsns_90_std = [np.std(inj100NSNS_90), np.std(inj90NSNS_90), np.std(inj80NSNS_90), np.std(inj70NSNS_90), np.std(inj60NSNS_90), np.std(inj50NSNS_90), np.std(inj40NSNS_90), np.std(inj30NSNS_90), np.std(inj20NSNS_90)]
 nsnsNumInj_90 = [1*nsnsInj, 0.9*nsnsInj, 0.8*nsnsInj, 0.7*nsnsInj, 0.6*nsnsInj, 0.5*nsnsInj, 0.4*nsnsInj, 0.3*nsnsInj, 0.2*nsnsInj]
-nsns_50_mean = [np.mean(injcontrolNSNS_50), np.mean(inj90NSNS_50), np.mean(inj80NSNS_50), np.mean(inj70NSNS_50), np.mean(inj60NSNS_50), np.mean(inj50NSNS_50), np.mean(inj40NSNS_50), np.mean(inj30NSNS_50), np.mean(inj20NSNS_50), np.mean(inj10NSNS_50)]
-nsns_50_std = [np.std(injcontrolNSNS_50), np.std(inj90NSNS_50), np.std(inj80NSNS_50), np.std(inj70NSNS_50), np.std(inj60NSNS_50), np.std(inj50NSNS_50), np.std(inj40NSNS_50), np.std(inj30NSNS_50), np.std(inj20NSNS_50), np.std(inj10NSNS_50)]
+nsns_50_mean = [np.mean(inj100NSNS_50), np.mean(inj90NSNS_50), np.mean(inj80NSNS_50), np.mean(inj70NSNS_50), np.mean(inj60NSNS_50), np.mean(inj50NSNS_50), np.mean(inj40NSNS_50), np.mean(inj30NSNS_50), np.mean(inj20NSNS_50), np.mean(inj10NSNS_50)]
+nsns_50_std = [np.std(inj100NSNS_50), np.std(inj90NSNS_50), np.std(inj80NSNS_50), np.std(inj70NSNS_50), np.std(inj60NSNS_50), np.std(inj50NSNS_50), np.std(inj40NSNS_50), np.std(inj30NSNS_50), np.std(inj20NSNS_50), np.std(inj10NSNS_50)]
 nsnsNumInj_50 = [1*nsnsInj, 0.9*nsnsInj, 0.8*nsnsInj, 0.7*nsnsInj, 0.6*nsnsInj, 0.5*nsnsInj, 0.4*nsnsInj, 0.3*nsnsInj, 0.2*nsnsInj, 0.1*nsnsInj]
 
-nsbhAlign_90_mean = [np.mean(injcontrolNSBHAlign_90), np.mean(inj95NSBHAlign_90), np.mean(inj90NSBHAlign_90), np.mean(inj85NSBHAlign_90), np.mean(inj80NSBHAlign_90), np.mean(inj75NSBHAlign_90), np.mean(inj70NSBHAlign_90), np.mean(inj65NSBHAlign_90), np.mean(inj60NSBHAlign_90), np.mean(inj50NSBHAlign_90)]
-nsbhAlign_90_std = [np.std(injcontrolNSBHAlign_90), np.std(inj95NSBHAlign_90), np.std(inj90NSBHAlign_90), np.std(inj85NSBHAlign_90), np.std(inj80NSBHAlign_90), np.std(inj75NSBHAlign_90), np.std(inj70NSBHAlign_90), np.std(inj65NSBHAlign_90), np.std(inj60NSBHAlign_90), np.std(inj50NSBHAlign_90)]
-nsbhAlign_50_mean = [np.mean(injcontrolNSBHAlign_50), np.mean(inj95NSBHAlign_50), np.mean(inj90NSBHAlign_50), np.mean(inj85NSBHAlign_50), np.mean(inj80NSBHAlign_50), np.mean(inj75NSBHAlign_50), np.mean(inj70NSBHAlign_50), np.mean(inj65NSBHAlign_50), np.mean(inj60NSBHAlign_50), np.mean(inj50NSBHAlign_50)]
-nsbhAlign_50_std = [np.std(injcontrolNSBHAlign_50), np.std(inj95NSBHAlign_50), np.std(inj90NSBHAlign_50), np.std(inj85NSBHAlign_50), np.std(inj80NSBHAlign_50), np.std(inj75NSBHAlign_50), np.std(inj70NSBHAlign_50), np.std(inj65NSBHAlign_50), np.std(inj60NSBHAlign_50), np.std(inj50NSBHAlign_50)]
+nsbhAlign_90_mean = [np.mean(inj100NSBHAlign_90), np.mean(inj95NSBHAlign_90), np.mean(inj90NSBHAlign_90), np.mean(inj85NSBHAlign_90), np.mean(inj80NSBHAlign_90), np.mean(inj75NSBHAlign_90), np.mean(inj70NSBHAlign_90), np.mean(inj65NSBHAlign_90), np.mean(inj60NSBHAlign_90), np.mean(inj50NSBHAlign_90)]
+nsbhAlign_90_std = [np.std(inj100NSBHAlign_90), np.std(inj95NSBHAlign_90), np.std(inj90NSBHAlign_90), np.std(inj85NSBHAlign_90), np.std(inj80NSBHAlign_90), np.std(inj75NSBHAlign_90), np.std(inj70NSBHAlign_90), np.std(inj65NSBHAlign_90), np.std(inj60NSBHAlign_90), np.std(inj50NSBHAlign_90)]
+nsbhAlign_50_mean = [np.mean(inj100NSBHAlign_50), np.mean(inj95NSBHAlign_50), np.mean(inj90NSBHAlign_50), np.mean(inj85NSBHAlign_50), np.mean(inj80NSBHAlign_50), np.mean(inj75NSBHAlign_50), np.mean(inj70NSBHAlign_50), np.mean(inj65NSBHAlign_50), np.mean(inj60NSBHAlign_50), np.mean(inj50NSBHAlign_50)]
+nsbhAlign_50_std = [np.std(inj100NSBHAlign_50), np.std(inj95NSBHAlign_50), np.std(inj90NSBHAlign_50), np.std(inj85NSBHAlign_50), np.std(inj80NSBHAlign_50), np.std(inj75NSBHAlign_50), np.std(inj70NSBHAlign_50), np.std(inj65NSBHAlign_50), np.std(inj60NSBHAlign_50), np.std(inj50NSBHAlign_50)]
 nsbhAlignNumInj = [1*nsbhAlignInj, 0.95*nsbhAlignInj, 0.9*nsbhAlignInj, 0.85*nsbhAlignInj, 0.8*nsbhAlignInj, 0.75*nsbhAlignInj, 0.7*nsbhAlignInj, 0.65*nsbhAlignInj, 0.6*nsbhAlignInj, 0.5*nsbhAlignInj]
 
-nsbhPrecess_90_mean = [np.mean(injcontrolNSBHPrecess_90), np.mean(inj95NSBHPrecess_90), np.mean(inj90NSBHPrecess_90), np.mean(inj85NSBHPrecess_90), np.mean(inj80NSBHPrecess_90), np.mean(inj75NSBHPrecess_90), np.mean(inj70NSBHPrecess_90), np.mean(inj65NSBHPrecess_90), np.mean(inj60NSBHPrecess_90), np.mean(inj50NSBHPrecess_90)]
-nsbhPrecess_90_std = [np.std(injcontrolNSBHPrecess_90), np.std(inj95NSBHPrecess_90), np.std(inj90NSBHPrecess_90), np.std(inj85NSBHPrecess_90), np.std(inj80NSBHPrecess_90), np.std(inj75NSBHPrecess_90), np.std(inj70NSBHPrecess_90), np.std(inj65NSBHPrecess_90), np.std(inj60NSBHPrecess_90), np.std(inj50NSBHPrecess_90)]
-nsbhPrecess_50_mean = [np.mean(injcontrolNSBHPrecess_50), np.mean(inj95NSBHPrecess_50), np.mean(inj90NSBHPrecess_50), np.mean(inj85NSBHPrecess_50), np.mean(inj80NSBHPrecess_50), np.mean(inj75NSBHPrecess_50), np.mean(inj70NSBHPrecess_50), np.mean(inj65NSBHPrecess_50), np.mean(inj60NSBHPrecess_50), np.mean(inj50NSBHPrecess_50)]
-nsbhPrecess_50_std = [np.std(injcontrolNSBHPrecess_50), np.std(inj95NSBHPrecess_50), np.std(inj90NSBHPrecess_50), np.std(inj85NSBHPrecess_50), np.std(inj80NSBHPrecess_50), np.std(inj75NSBHPrecess_50), np.std(inj70NSBHPrecess_50), np.std(inj65NSBHPrecess_50), np.std(inj60NSBHPrecess_50), np.std(inj50NSBHPrecess_50)]
+nsbhPrecess_90_mean = [np.mean(inj100NSBHPrecess_90), np.mean(inj95NSBHPrecess_90), np.mean(inj90NSBHPrecess_90), np.mean(inj85NSBHPrecess_90), np.mean(inj80NSBHPrecess_90), np.mean(inj75NSBHPrecess_90), np.mean(inj70NSBHPrecess_90), np.mean(inj65NSBHPrecess_90), np.mean(inj60NSBHPrecess_90), np.mean(inj50NSBHPrecess_90)]
+nsbhPrecess_90_std = [np.std(inj100NSBHPrecess_90), np.std(inj95NSBHPrecess_90), np.std(inj90NSBHPrecess_90), np.std(inj85NSBHPrecess_90), np.std(inj80NSBHPrecess_90), np.std(inj75NSBHPrecess_90), np.std(inj70NSBHPrecess_90), np.std(inj65NSBHPrecess_90), np.std(inj60NSBHPrecess_90), np.std(inj50NSBHPrecess_90)]
+nsbhPrecess_50_mean = [np.mean(inj100NSBHPrecess_50), np.mean(inj95NSBHPrecess_50), np.mean(inj90NSBHPrecess_50), np.mean(inj85NSBHPrecess_50), np.mean(inj80NSBHPrecess_50), np.mean(inj75NSBHPrecess_50), np.mean(inj70NSBHPrecess_50), np.mean(inj65NSBHPrecess_50), np.mean(inj60NSBHPrecess_50), np.mean(inj50NSBHPrecess_50)]
+nsbhPrecess_50_std = [np.std(inj100NSBHPrecess_50), np.std(inj95NSBHPrecess_50), np.std(inj90NSBHPrecess_50), np.std(inj85NSBHPrecess_50), np.std(inj80NSBHPrecess_50), np.std(inj75NSBHPrecess_50), np.std(inj70NSBHPrecess_50), np.std(inj65NSBHPrecess_50), np.std(inj60NSBHPrecess_50), np.std(inj50NSBHPrecess_50)]
 nsbhPrecessNumInj = [1*nsbhPrecessInj, 0.95*nsbhPrecessInj, 0.9*nsbhPrecessInj, 0.85*nsbhPrecessInj, 0.8*nsbhPrecessInj, 0.75*nsbhPrecessInj, 0.7*nsbhPrecessInj, 0.65*nsbhPrecessInj, 0.6*nsbhPrecessInj, 0.5*nsbhPrecessInj]
 
 # NSNS Plot
