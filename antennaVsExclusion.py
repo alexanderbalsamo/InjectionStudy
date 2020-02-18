@@ -118,24 +118,28 @@ ax90.scatter(antenna1Best, exclu90Ave)
 ax90.set(xlabel='antenna Factors', ylabel='Exclusion Distance 90% (Mpc)',
        title='1st Best Antenna Factors vs Offtrial Exclusion Distance 90%')
 ax90.grid()
+fig90.savefig(fname='antFact1vsExDist90.png')
 
-fig90, ax90_2 = plt.subplots()
+fig90_2, ax90_2 = plt.subplots()
 ax90_2.scatter(antenna2Best, exclu90Ave)
 ax90_2.set(xlabel='antenna Factors', ylabel='Exclusion Distance 90% (Mpc)',
        title='2nd Best Antenna Factors vs Offtrial Exclusion Distance 90%')
 ax90_2.grid()
+fig90_2.savefig(fname='antFact2vsExDist90.png')
 
 fig50, ax50 = plt.subplots()
 ax50.scatter(antenna1Best, exclu50Ave)
 ax50.set(xlabel='antenna Factors', ylabel='Exclusion Distance 50% (Mpc)',
        title='1st Best Antenna Factors vs Offtrial Exclusion Distance 50%')
 ax50.grid()
+fig50.savefig(fname='antFact1vsExDist50.png')
 
-fig50, ax50_2 = plt.subplots()
+fig50_2, ax50_2 = plt.subplots()
 ax50_2.scatter(antenna2Best, exclu50Ave)
 ax50_2.set(xlabel='antenna Factors', ylabel='Exclusion Distance 50% (Mpc)',
        title='2nd Best Antenna Factors vs Offtrial Exclusion Distance 50%')
 ax50_2.grid()
+fig50_2.savefig(fname='antFact2vsExDist50.png')
 
 # Show Plots
 plt.show()
