@@ -131,6 +131,8 @@ axNSNS.set_title('Exclusion Distance vs. Injections for NSNS', fontsize=30)
 axNSNS.legend(loc='lower right', prop={'size':20})
 axNSNS.set_xlim(0,4200)
 
+figNSNS.savefig(fname='InjVsExDist_NSNS.png')
+
 #NSBHAlign Plot
 x2 = [6000,13000]
 figNSBHAlign=plt.figure()
@@ -150,6 +152,8 @@ axNSBHAlign.set_title('Exclusion Distance vs. Injections for NSBH Aligned', font
 axNSBHAlign.legend(loc='lower right', prop={'size':20})
 axNSBHAlign.set_xlim(6000,13000)
 
+figNSBHAlign.savefig(fname='InjVsExDist_NSBHAlign.png')
+
 #NSBHPrecess Plot
 figNSBHPrecess=plt.figure()
 axNSBHPrecess=figNSBHPrecess.gca()
@@ -164,8 +168,10 @@ axNSBHPrecess.fill_between(x2, 0.1*np.mean(injcontrolNSBHPrecess_50)+np.mean(inj
 
 axNSBHPrecess.set_xlabel('Number of Injections', fontsize=20)
 axNSBHPrecess.set_ylabel('Exclusion Distance (Mpc)', fontsize=20)
-axNSBHPrecess.set_title('Exclusion Distance vs. Injections for NSBH Precessed', fontsize=30)
+axNSBHPrecess.set_title('Exclusion Distance vs. Injections for NSBH Precessing', fontsize=30)
 axNSBHPrecess.legend(loc='lower right', prop={'size':20})
+
+figNSBHPrecess.savefig(fname='InjVsExDist_NSBHPrecess.png')
 
 # Show Plots
 plt.show()
