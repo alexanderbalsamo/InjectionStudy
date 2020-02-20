@@ -50,7 +50,7 @@ def error(pData, data, p):
 	sigE = (float(data[2])+float(data[3]))/2
 
 	partialE = ((preD-d)*(100*preE-p))/(100*(preE-e)**2)
-	partialPreE = ((d-preD)*(e-p/100))/(preE-e)**2
+	partialPreE = ((d-preD)*(e-p/100.))/(preE-e)**2
 
 	sigma = math.sqrt(partialE**2*sigE**2 + partialPreE**2*sigPreE**2)
 	return sigma
