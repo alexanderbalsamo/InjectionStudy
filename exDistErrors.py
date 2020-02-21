@@ -46,8 +46,8 @@ def error(pData, data, p):
 	d = float(data[0])
 	preE = float(pData[1])
 	e = float(data[1])
-	sigPreE = (float(pData[2])+float(pData[3]))/2
-	sigE = (float(data[2])+float(data[3]))/2
+	sigPreE = (float(pData[2])+float(pData[3]))/2.
+	sigE = (float(data[2])+float(data[3]))/2.
 
 	partialE = ((preD-d)*(100*preE-p))/(100*(preE-e)**2)
 	partialPreE = ((d-preD)*(e-p/100.))/(preE-e)**2

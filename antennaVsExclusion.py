@@ -106,36 +106,38 @@ grb190515190Ex50 = [80.0835722045, 80.1329221853, 80.0196807774, 80.1781682271, 
 grb190515190Ex50Ave = np.mean(grb190515190Ex50)
 
 # Lists of information with all GRBs
-name = ["GRB190407788", "GRB190420981", "GRB190427A", "GRB190504678", "GRB190505051", "GRB190510430", "GRB190525032", "GRB190531568", "GRB190601325", "GRB190610A", "GRB190610834", "GRB190923617", "GRB190830264", "GRB190810675", "GRB190804058", "GRB190712018", "GRB190630257", "GRB190627A", "GRB190606080", "GRB190515190"]
-antenna1Best = [0.919, 0.772, 0.983, 0.946, 0.525, 0.582, 0.813, 0.726, 0.690, 0.302, 0.880, 0.617, 0.953, 0.645, 0.800, 0.971, 0.448, 0.452, 0.613, 0.488]
-antenna2Best = [0.506, 0.720, 0.504, 0.315, 0.500, 0.500, 0.651, 0.467, 0.523, 0.202, 0.511, 0.289, 0.915, 0.501, 0.760, 0.800, 0.285, 0.316, 0.199, 0.412]
-exclu90Ave = [grb190407788Ex90Ave, grb190420981Ex90Ave, grb190427AEx90Ave, grb190504678Ex90Ave, grb190505051Ex90Ave, grb190510430Ex90Ave, grb190525032Ex90Ave, grb190531568Ex90Ave, grb190601325Ex90Ave, grb190610AEx90Ave, grb190610834Ex90Ave, grb190923617Ex90Ave, grb190830264Ex90Ave, grb190810675Ex90Ave, grb190804058Ex90Ave, grb190712018Ex90Ave, grb190630257Ex90Ave, grb190627AEx90Ave, grb190606080Ex90Ave, grb190515190Ex90Ave]
-exclu50Ave = [grb190407788Ex50Ave, grb190420981Ex50Ave, grb190427AEx50Ave, grb190504678Ex50Ave, grb190505051Ex50Ave, grb190510430Ex50Ave, grb190525032Ex50Ave, grb190531568Ex50Ave, grb190601325Ex90Ave, grb190610AEx50Ave, grb190610834Ex50Ave, grb190923617Ex50Ave, grb190830264Ex50Ave, grb190810675Ex50Ave, grb190804058Ex50Ave, grb190712018Ex50Ave, grb190630257Ex50Ave, grb190627AEx50Ave, grb190606080Ex50Ave, grb190515190Ex50Ave]
+name = 		 ["GRB190407788",      	"GRB190420981", "GRB190427A", "GRB190504678", "GRB190505051", "GRB190510430", "GRB190525032", "GRB190601325", "GRB190610A", "GRB190610834", "GRB190830264", "GRB190810675", "GRB190804058", "GRB190712018", "GRB190630257", "GRB190627A", "GRB190606080", "GRB190515190"]
+antenna1Best = [0.919, 0.772, 0.983, 0.946, 0.525, 0.582, 0.813, 0.690, 0.302, 0.880, 0.953, 0.645, 0.800, 0.971, 0.448, 0.452, 0.613, 0.488]
+antenna2Best = [0.506, 0.720, 0.504, 0.315, 0.500, 0.500, 0.651, 0.523, 0.202, 0.511, 0.915, 0.501, 0.760, 0.800, 0.285, 0.316, 0.199, 0.412]
+exclu90Ave = [grb190407788Ex90Ave, 	grb190420981Ex90Ave, grb190427AEx90Ave, grb190504678Ex90Ave, grb190505051Ex90Ave, grb190510430Ex90Ave, grb190525032Ex90Ave, grb190601325Ex90Ave, grb190610AEx90Ave, grb190610834Ex90Ave, grb190830264Ex90Ave, grb190810675Ex90Ave, grb190804058Ex90Ave, grb190712018Ex90Ave, grb190630257Ex90Ave, grb190627AEx90Ave, grb190606080Ex90Ave, grb190515190Ex90Ave]
+exclu90err = [4.905496342543896,    10.1477956793,		 7.72280287013,		4.044501064003285,   2.66183424, 		  15.137899695517495,  4.800286616443967,	7.860245624562807,	 2.88789821644,	 	5.70422303245,		 15.22435768238921,	  3.7141618209116625,  24.726406802, 		5.78848165687765,	 3.3543675352,		  5.7933757022362995,2.2537173332640363,  4.19587506617	   ]
+exclu50Ave = [grb190407788Ex50Ave, 	grb190420981Ex50Ave, grb190427AEx50Ave, grb190504678Ex50Ave, grb190505051Ex50Ave, grb190510430Ex50Ave, grb190525032Ex50Ave, grb190601325Ex90Ave, grb190610AEx50Ave, grb190610834Ex50Ave, grb190830264Ex50Ave, grb190810675Ex50Ave, grb190804058Ex50Ave, grb190712018Ex50Ave, grb190630257Ex50Ave, grb190627AEx50Ave, grb190606080Ex50Ave, grb190515190Ex50Ave]
+exclu50err = [4.937500505876478,    5.04894308235,		 6.30382394612,		2.9702652116037744,  3.87321224862, 	  3.8807160072599536,  6.373142326368604,   6.836912226751878,	 2.54026431952,	 	3.66778590264,		 6.405721498179706,	  4.688381167905543,   11.4561972396,		6.170499188231567,	 2.32210715364,		  2.1957950900444163,3.4492449785291357,  3.06047056018	   ]
 
 # Plots
 fig90, ax90 = plt.subplots()
-ax90.scatter(antenna1Best, exclu90Ave)
+ax90.errorbar(antenna1Best, exclu90Ave, yerr=exclu90err, fmt='o')
 ax90.set(xlabel='antenna Factors', ylabel='Exclusion Distance 90% (Mpc)',
        title='1st Best Antenna Factors vs Offtrial Exclusion Distance 90%')
 ax90.grid()
 fig90.savefig(fname='antFact1vsExDist90.png')
 
 fig90_2, ax90_2 = plt.subplots()
-ax90_2.scatter(antenna2Best, exclu90Ave)
+ax90_2.errorbar(antenna2Best, exclu90Ave, yerr=exclu50err, fmt='o')
 ax90_2.set(xlabel='antenna Factors', ylabel='Exclusion Distance 90% (Mpc)',
        title='2nd Best Antenna Factors vs Offtrial Exclusion Distance 90%')
 ax90_2.grid()
 fig90_2.savefig(fname='antFact2vsExDist90.png')
 
 fig50, ax50 = plt.subplots()
-ax50.scatter(antenna1Best, exclu50Ave)
+ax50.errorbar(antenna1Best, exclu50Ave, yerr=exclu90err, fmt='o')
 ax50.set(xlabel='antenna Factors', ylabel='Exclusion Distance 50% (Mpc)',
        title='1st Best Antenna Factors vs Offtrial Exclusion Distance 50%')
 ax50.grid()
 fig50.savefig(fname='antFact1vsExDist50.png')
 
 fig50_2, ax50_2 = plt.subplots()
-ax50_2.scatter(antenna2Best, exclu50Ave)
+ax50_2.errorbar(antenna2Best, exclu50Ave, yerr=exclu50err, fmt='o')
 ax50_2.set(xlabel='antenna Factors', ylabel='Exclusion Distance 50% (Mpc)',
        title='2nd Best Antenna Factors vs Offtrial Exclusion Distance 50%')
 ax50_2.grid()
