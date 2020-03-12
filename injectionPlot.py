@@ -1,6 +1,15 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+def errorCalc(mean, std, DIST):
+	dummyList = []
+	for i in range(len(mean)):
+		d = mean[i] - DIST
+		e = std[i]
+		newErr = (d**2+e**2)**(1./2.)
+		dummyList.append(newErr)
+	return dummyList
+
 #test
 ################## NSNS #####################
 # NSNS values 90% Exclusion Distance
@@ -93,24 +102,30 @@ nsnsInj = 4000
 nsbhAlignInj = 12500
 nsbhPrecessInj = 12500
 
-################ Plotting #################
+################ Values #################
 nsns_90_mean = [np.mean(inj100NSNS_90), np.mean(inj90NSNS_90), np.mean(inj80NSNS_90), np.mean(inj70NSNS_90), np.mean(inj60NSNS_90), np.mean(inj50NSNS_90), np.mean(inj40NSNS_90), np.mean(inj30NSNS_90), np.mean(inj20NSNS_90)]
 nsns_90_std = [11.063479404361873, 3.700565758284695, 3.6692927735743956, 6.65511020741, 10.6678190601, 9.72355054478, 6.34528534050268, 5.865938840354687, 10.64974986085202]
+nsns_90_err = errorCalc(nsns_90_mean, nsns_90_std, np.mean(injcontrolNSNS_90))
 nsnsNumInj_90 = [1*nsnsInj, 0.9*nsnsInj, 0.8*nsnsInj, 0.7*nsnsInj, 0.6*nsnsInj, 0.5*nsnsInj, 0.4*nsnsInj, 0.3*nsnsInj, 0.2*nsnsInj]
 nsns_50_mean = [np.mean(inj100NSNS_50), np.mean(inj90NSNS_50), np.mean(inj80NSNS_50), np.mean(inj70NSNS_50), np.mean(inj60NSNS_50), np.mean(inj50NSNS_50), np.mean(inj40NSNS_50), np.mean(inj30NSNS_50), np.mean(inj20NSNS_50), np.mean(inj10NSNS_50)]
 nsns_50_std = [6.738043973967401, 4.711676157772397, 5.301722593946216, 10.7553460849, 4.97605303394, 33.5169350083, 4.829679075135576, 4.176415388028511, 5.89478930396605, 3.341110625402934]
+nsns_50_err = errorCalc(nsns_50_mean, nsns_50_std, np.mean(injcontrolNSNS_50))
 nsnsNumInj_50 = [1*nsnsInj, 0.9*nsnsInj, 0.8*nsnsInj, 0.7*nsnsInj, 0.6*nsnsInj, 0.5*nsnsInj, 0.4*nsnsInj, 0.3*nsnsInj, 0.2*nsnsInj, 0.1*nsnsInj]
 
 nsbhAlign_90_mean = [np.mean(inj100NSBHAlign_90), np.mean(inj95NSBHAlign_90), np.mean(inj90NSBHAlign_90), np.mean(inj85NSBHAlign_90), np.mean(inj80NSBHAlign_90), np.mean(inj75NSBHAlign_90), np.mean(inj70NSBHAlign_90), np.mean(inj65NSBHAlign_90), np.mean(inj60NSBHAlign_90), np.mean(inj50NSBHAlign_90)]
 nsbhAlign_90_std = [13.3514417736463, 6.763015800603423, 10.816517042851002, 11.343711654851754, 10.276219128, 31.0497580382, 9.75870059841632, 14.110640287440887, 7.52688093747872, 9.27830349471]
+nsbhAlign_90_err = errorCalc(nsbhAlign_90_mean, nsbhAlign_90_std, np.mean(injcontrolNSBHAlign_90))
 nsbhAlign_50_mean = [np.mean(inj100NSBHAlign_50), np.mean(inj95NSBHAlign_50), np.mean(inj90NSBHAlign_50), np.mean(inj85NSBHAlign_50), np.mean(inj80NSBHAlign_50), np.mean(inj75NSBHAlign_50), np.mean(inj70NSBHAlign_50), np.mean(inj65NSBHAlign_50), np.mean(inj60NSBHAlign_50), np.mean(inj50NSBHAlign_50)]
 nsbhAlign_50_std = [7.761793772040417, 12.684935353607644, 9.207894303406931, 10.026442593547355, 9.53740464565, 11.5537125999, 6.56585706910925, 17.679110365465252, 41.704807443853305, 99.1745945704]
+nsbhAlign_50_err = errorCalc(nsbhAlign_50_mean, nsbhAlign_50_std, np.mean(injcontrolNSBHAlign_50))
 nsbhAlignNumInj = [1*nsbhAlignInj, 0.95*nsbhAlignInj, 0.9*nsbhAlignInj, 0.85*nsbhAlignInj, 0.8*nsbhAlignInj, 0.75*nsbhAlignInj, 0.7*nsbhAlignInj, 0.65*nsbhAlignInj, 0.6*nsbhAlignInj, 0.5*nsbhAlignInj]
 
 nsbhPrecess_90_mean = [np.mean(inj100NSBHPrecess_90), np.mean(inj95NSBHPrecess_90), np.mean(inj90NSBHPrecess_90), np.mean(inj85NSBHPrecess_90), np.mean(inj80NSBHPrecess_90), np.mean(inj75NSBHPrecess_90), np.mean(inj70NSBHPrecess_90), np.mean(inj65NSBHPrecess_90), np.mean(inj60NSBHPrecess_90), np.mean(inj50NSBHPrecess_90)]
 nsbhPrecess_90_std = [11.380450987844023, 9.288725373870486, 3.9526855403372867, 6.5316522005021405, 21.5440835645, 12.0579867157, 6.8773294132981055, 10.118444773002604, 19.30353658535733, 10.8410448196]
+nsbhPrecess_90_err = errorCalc(nsbhPrecess_90_mean, nsbhPrecess_90_std, np.mean(injcontrolNSBHPrecess_90))
 nsbhPrecess_50_mean = [np.mean(inj100NSBHPrecess_50), np.mean(inj95NSBHPrecess_50), np.mean(inj90NSBHPrecess_50), np.mean(inj85NSBHPrecess_50), np.mean(inj80NSBHPrecess_50), np.mean(inj75NSBHPrecess_50), np.mean(inj70NSBHPrecess_50), np.mean(inj65NSBHPrecess_50), np.mean(inj60NSBHPrecess_50), np.mean(inj50NSBHPrecess_50)]
 nsbhPrecess_50_std = [7.079303364544146, 5.317147012680572, 11.604404282417994, 10.925635874610593, 11.0296778531, 15.9578893375, 8.399006032298338, 11.222149670766692, 17.063995734044685, 11.84361285]
+nsbhPrecess_50_err = errorCalc(nsbhPrecess_50_mean, nsbhPrecess_50_std, np.mean(injcontrolNSBHPrecess_50))
 nsbhPrecessNumInj = [1*nsbhPrecessInj, 0.95*nsbhPrecessInj, 0.9*nsbhPrecessInj, 0.85*nsbhPrecessInj, 0.8*nsbhPrecessInj, 0.75*nsbhPrecessInj, 0.7*nsbhPrecessInj, 0.65*nsbhPrecessInj, 0.6*nsbhPrecessInj, 0.5*nsbhPrecessInj]
 
 # NSNS Plot
@@ -118,11 +133,11 @@ x1 = [0,4200]
 figNSNS=plt.figure()
 axNSNS=figNSNS.gca()
 
-axNSNS.errorbar(nsnsNumInj_90, nsns_90_mean, yerr=nsns_90_std, fmt='o', color='r', label='NSNS 90% Exclusion Distances')
+axNSNS.errorbar(nsnsNumInj_90, nsns_90_mean, yerr=nsns_90_err, fmt='o', color='r', label='NSNS 90% Exclusion Distances')
 line90 = axNSNS.axhline(np.mean(injcontrolNSNS_90), dashes=[6,2], label='GRB190420981 NSNS 90% Exclusion Distance', color='r')
 axNSNS.fill_between(x1, 0.1*np.mean(injcontrolNSNS_90)+np.mean(injcontrolNSNS_90), np.mean(injcontrolNSNS_90) - 0.1*np.mean(injcontrolNSNS_90), alpha=0.1, color='r')
 
-axNSNS.errorbar(nsnsNumInj_50, nsns_50_mean, yerr=nsns_50_std, fmt='o', color='b', label='NSNS 50% Exclusion Distance')
+axNSNS.errorbar(nsnsNumInj_50, nsns_50_mean, yerr=nsns_50_err, fmt='o', color='b', label='NSNS 50% Exclusion Distance')
 line50 = axNSNS.axhline(np.mean(injcontrolNSNS_50), dashes=[6,2], label='GRB190420981 NSNS 50% Exclusion Distance', color='b')
 axNSNS.fill_between(x1, 0.1*np.mean(injcontrolNSNS_50)+np.mean(injcontrolNSNS_50), np.mean(injcontrolNSNS_50) - 0.1*np.mean(injcontrolNSNS_50), alpha=0.1, color='b')
 
@@ -139,11 +154,11 @@ x2 = [6000,13000]
 figNSBHAlign=plt.figure()
 axNSBHAlign=figNSBHAlign.gca()
 
-axNSBHAlign.errorbar(nsbhAlignNumInj, nsbhAlign_90_mean, yerr=nsbhAlign_90_std, fmt='o', color='k', label='NSBH Aligned 90% Exclusion Distances')
+axNSBHAlign.errorbar(nsbhAlignNumInj, nsbhAlign_90_mean, yerr=nsbhAlign_90_err, fmt='o', color='k', label='NSBH Aligned 90% Exclusion Distances')
 line90 = axNSBHAlign.axhline(np.mean(injcontrolNSBHAlign_90), dashes=[6,2], label='GRB190420981 NSBH Aligned 90% Exclusion Distance', color='k')
 axNSBHAlign.fill_between(x2, 0.1*np.mean(injcontrolNSBHAlign_90)+np.mean(injcontrolNSBHAlign_90), np.mean(injcontrolNSBHAlign_90) - 0.1*np.mean(injcontrolNSBHAlign_90), alpha=0.1, color='k')
 
-axNSBHAlign.errorbar(nsbhAlignNumInj, nsbhAlign_50_mean, yerr=nsbhAlign_50_std, fmt='o', color='m', label='NSBH Aligned 50% Exclusion Distance')
+axNSBHAlign.errorbar(nsbhAlignNumInj, nsbhAlign_50_mean, yerr=nsbhAlign_50_err, fmt='o', color='m', label='NSBH Aligned 50% Exclusion Distance')
 line50 = axNSBHAlign.axhline(np.mean(injcontrolNSBHAlign_50), dashes=[6,2], label='GRB190420981 NSBH Aligned 50% Exclusion Distance', color='m')
 axNSBHAlign.fill_between(x2, 0.1*np.mean(injcontrolNSBHAlign_50)+np.mean(injcontrolNSBHAlign_50), np.mean(injcontrolNSBHAlign_50) - 0.1*np.mean(injcontrolNSBHAlign_50), alpha=0.1, color='m')
 
@@ -159,11 +174,11 @@ figNSBHAlign.savefig(fname='InjVsExDist_NSBHAlign.png')
 figNSBHPrecess=plt.figure()
 axNSBHPrecess=figNSBHPrecess.gca()
 
-axNSBHPrecess.errorbar(nsbhPrecessNumInj, nsbhPrecess_90_mean, yerr=nsbhPrecess_90_std, fmt='o', color='g', label='NSBH Precessed 90% Exclusion Distances')
+axNSBHPrecess.errorbar(nsbhPrecessNumInj, nsbhPrecess_90_mean, yerr=nsbhPrecess_90_err, fmt='o', color='g', label='NSBH Precessed 90% Exclusion Distances')
 line90 = axNSBHPrecess.axhline(np.mean(injcontrolNSBHPrecess_90), dashes=[6,2], label='GRB190420981 NSBH Precessed 90% Exclusion Distance', color='g')
 axNSBHPrecess.fill_between(x2, 0.1*np.mean(injcontrolNSBHPrecess_90)+np.mean(injcontrolNSBHPrecess_90), np.mean(injcontrolNSBHPrecess_90) - 0.1*np.mean(injcontrolNSBHPrecess_90), alpha=0.1, color='g')
 
-axNSBHPrecess.errorbar(nsbhPrecessNumInj, nsbhPrecess_50_mean, yerr=nsbhPrecess_50_std, fmt='o', color='c', label='NSBH Precessed 50% Exclusion Distance')
+axNSBHPrecess.errorbar(nsbhPrecessNumInj, nsbhPrecess_50_mean, yerr=nsbhPrecess_50_err, fmt='o', color='c', label='NSBH Precessed 50% Exclusion Distance')
 line50 = axNSBHPrecess.axhline(np.mean(injcontrolNSBHPrecess_50), dashes=[6,2], label='GRB190420981 NSBH Precessed 50% Exclusion Distance', color='c')
 axNSBHPrecess.fill_between(x2, 0.1*np.mean(injcontrolNSBHPrecess_50)+np.mean(injcontrolNSBHPrecess_50), np.mean(injcontrolNSBHPrecess_50) - 0.1*np.mean(injcontrolNSBHPrecess_50), alpha=0.1, color='c')
 

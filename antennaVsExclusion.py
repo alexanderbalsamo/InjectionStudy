@@ -3,6 +3,7 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy import stats
 
 # GRBs and their respective offtrial exclusion distances
 grb190407788Ex90 = [58.0739684979, 58.0739684979, 57.8582407059, 57.8367294722, 57.582307283, 57.7639043439]
@@ -113,6 +114,14 @@ exclu90Ave = [grb190407788Ex90Ave, 	grb190420981Ex90Ave, grb190427AEx90Ave, grb1
 exclu90err = [4.905496342543896,    10.1477956793,		 7.72280287013,		4.044501064003285,   2.66183424, 		  15.137899695517495,  4.800286616443967,	7.860245624562807,	 2.88789821644,	 	5.70422303245,		 15.22435768238921,	  3.7141618209116625,  24.726406802, 		5.78848165687765,	 3.3543675352,		  5.7933757022362995,2.2537173332640363,  4.19587506617	   ]
 exclu50Ave = [grb190407788Ex50Ave, 	grb190420981Ex50Ave, grb190427AEx50Ave, grb190504678Ex50Ave, grb190505051Ex50Ave, grb190510430Ex50Ave, grb190525032Ex50Ave, grb190601325Ex90Ave, grb190610AEx50Ave, grb190610834Ex50Ave, grb190830264Ex50Ave, grb190810675Ex50Ave, grb190804058Ex50Ave, grb190712018Ex50Ave, grb190630257Ex50Ave, grb190627AEx50Ave, grb190606080Ex50Ave, grb190515190Ex50Ave]
 exclu50err = [4.937500505876478,    5.04894308235,		 6.30382394612,		2.9702652116037744,  3.87321224862, 	  3.8807160072599536,  6.373142326368604,   6.836912226751878,	 2.54026431952,	 	3.66778590264,		 6.405721498179706,	  4.688381167905543,   11.4561972396,		6.170499188231567,	 2.32210715364,		  2.1957950900444163,3.4492449785291357,  3.06047056018	   ]
+slope1_90, intercept1_90, r1_90, p1_90, stdErr1_90 = stats.linregress(antenna1Best, exclu90Ave)
+slope2_90, intercept2_90, r2_90, p2_90, stdErr2_90 = stats.linregress(antenna2Best, exclu90Ave)
+slope1_50, intercept1_50, r1_50, p1_50, stdErr1_50 = stats.linregress(antenna1Best, exclu50Ave)
+slope2_50, intercept2_50, r2_50, p2_50, stdErr2_50 = stats.linregress(antenna2Best, exclu50Ave)
+print "r-squared (antenna1xExclu90): ", r1_90**2
+print "r-squared (antenna2xExclu90): ", r2_90**2
+print "r-squared (antenna1xExclu50): ", r1_50**2
+print "r-squared (antenna2xExclu50): ", r2_50**2
 
 # Plots
 fig90, ax90 = plt.subplots()
